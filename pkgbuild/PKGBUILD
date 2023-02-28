@@ -1,0 +1,23 @@
+# Maintainer: Barnabé di Kartola <barnabedikartola@gmail.com>
+
+pkgname=hide-titles-git
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+pkgdesc="A KWin script which hides the window titles when they are maximized."
+arch=('any')
+url="https://github.com/bahamondev/hide-titles"
+license=('GPL3')
+depends=('zip' 'plasma-framework')
+provides=("$pkgname")
+# conflicts=('')
+source=("git+${url}.git")
+md5sums=('SKIP')
+
+
+package() {
+
+	cd hide-titles
+	make build
+	plasmapkg2 -t kwinscript -i hide-titles.kwinscript -p ${pkgdir}/usr/share/kwin/scripts/
+
+}
