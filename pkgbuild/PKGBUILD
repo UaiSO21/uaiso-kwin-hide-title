@@ -13,7 +13,6 @@ provides=("$pkgname")
 source=("git+${url}.git")
 md5sums=('SKIP')
 
-
 package() {
 
 	cd hide-titles
