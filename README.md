@@ -1,6 +1,6 @@
 # Hide titles
 
-A KWin script which hides the window titles when they are maximized.
+A KWin script which hides the window titles when they are maximized. 
 
 ## Setup
 
